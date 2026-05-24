@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - Page Not Found | Pinnacle Grid</title>
+  <meta http-equiv="refresh" content="5;url=index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+  <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: #f8f9fa;
+    }
+    .error-code {
+      font-size: 150px;
+      font-weight: 900;
+      color: var(--bs-primary);
+      margin-bottom: 30px;
+      line-height: 1;
+    }
+    .error-message {
+      font-size: 24px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .error-description {
+      color: #777;
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+    .redirect-timer {
+      font-weight: 700;
+      color: var(--bs-primary);
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <div class="site-wrap">
+    <!-- ======= Header =======-->
+    <header class="fbs__net-navbar navbar navbar-expand-lg active" aria-label="freebootstrap.net navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Start Logo-->
+        <a class="navbar-brand w-auto" href="index.html">
+          <div class="d-flex flex-column align-items-start">
+            <img class="logo dark img-fluid custom-logo" src="assets/images/logo-main.svg" alt="Pinnacle Grid Logo">
+            <img class="logo light img-fluid custom-logo" src="assets/images/logo-light.svg" alt="Pinnacle Grid Logo Light">
+            <span class="logo-tagline">Make Your Brand Inexorable</span>
+          </div>
+        </a>
+        <!-- End Logo-->
+
+        <!-- Start offcanvas-->
+        <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
+          <div class="offcanvas-header d-lg-none">
+            <div class="offcanvas-header-logo">
+              <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
+                <div class="d-flex flex-column align-items-start">
+                  <img class="logo dark img-fluid custom-logo" src="assets/images/logo-main.svg" alt="Pinnacle Grid">
+                  <img class="logo light img-fluid custom-logo" src="assets/images/logo-light.svg" alt="Pinnacle Grid">
+                  <span class="logo-tagline">Make Your Brand Inexorable</span>
+                </div>
+              </a>
+            </div>
+            <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body align-items-lg-center">
+            <ul class="navbar-nav nav ms-auto ps-lg-5 mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End offcanvas-->
+
+        <div class="ms-auto w-auto">
+          <div class="header-social d-flex align-items-center gap-1">
+            <a class="btn btn-primary py-2 px-4 shadow-sm" href="index.html#contact">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="error-container p-4">
+      <div class="error-code" data-aos="zoom-in">404</div>
+    <h1 class="error-message" data-aos="fade-up">Oops! You have entered an invalid URL.</h1>
+    <p class="error-description" data-aos="fade-up" data-aos-delay="100">
+      The page you are looking for does not exist or has been moved. You will be automatically redirected to the home page in <span id="timer" class="redirect-timer">5</span> seconds.
+    </p>
+    <a href="index.html" class="btn btn-primary px-5 py-3 shadow-lg btn-lg" data-aos="fade-up" data-aos-delay="200">
+      Back to Home
+    </a>
+
+    <div class="mt-5 text-muted small" data-aos="fade-in" data-aos-delay="500">
+      <div class="mb-3 d-flex justify-content-center gap-3">
+        <a href="https://www.linkedin.com/in/pinnacle-grid-a69267401" target="_blank"
+          class="text-decoration-none text-muted fs-4" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/pinnaclegridofficial" target="_blank"
+          class="text-decoration-none text-muted fs-4" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+      &copy; <script>document.write(new Date().getFullYear());</script> Pinnacle Grid. All rights reserved.
+    </div>
+  </div>
+
+  <script src="assets/vendors/aos/aos.js"></script>
+  <script>
+    AOS.init();
+    let timeLeft = 5;
+    let timerElement = document.getElementById("timer");
+    let countdown = setInterval(function() {
+      timeLeft--;
+      timerElement.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
+
+
