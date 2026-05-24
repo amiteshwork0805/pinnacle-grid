@@ -1,218 +1,222 @@
-import { IService, IPricingTier, ITestimonial, IFAQ, IProcessStep } from './types';
+import { IExpertiseCard, IProcessStep, IService, IPricingTier, ITestimonial, IFAQ, IValue, IStatistic } from './types';
 
-export const SERVICES: IService[] = [
+// Company Info
+export const COMPANY_NAME = 'Pinnacle Grid';
+export const COMPANY_TAGLINE = 'Make Your Brand Inexorable';
+export const COMPANY_DESCRIPTION = 'From NFC Smart Visiting Cards to expert Social Media Marketing and Digital Solutions, we provide the tools and strategy to help your business grow and thrive in Hyderabad.';
+export const COMPANY_URL = 'https://www.pinnaclegrid.com';
+export const COMPANY_PHONE = '+91 9100305750';
+export const COMPANY_EMAIL = 'pinnaclegridhyd@gmail.com';
+export const COMPANY_ADDRESS = '8-3-945/A/11/101 Nagarjuna Nagar Colony, Opposite Vasan Eye Care, Yellareddy Guda Khairatabad, Hyderabad, Telangana 500073, India';
+
+// Hero Section
+export const HERO_BADGE = 'TRUSTED BY 300+ INDIAN BUSINESSES';
+export const HERO_HEADLINE = 'Dominate Your Local Market with Smart Digital Solutions';
+export const HERO_SUBHEADING = 'From NFC Smart Visiting Cards to expert Social Media Marketing, we provide the tools and strategy to help your business grow and thrive.';
+
+// Values
+export const VALUES: IValue[] = [
+  { id: 'client-success', title: 'Client Success Focus' },
+  { id: 'results-oriented', title: 'Results-Oriented Execution' },
+  { id: 'creative-excellence', title: 'Creative Excellence' },
+  { id: 'transparency', title: 'Transparency' },
+  { id: 'empowerment', title: 'Empowerment' },
+];
+
+export const MISSION_STATEMENT = 'Our mission is to empower individuals and businesses by delivering secure, efficient, and user-friendly Digital Marketing services.';
+
+// Expertise Cards (5 main services with details)
+export const EXPERTISE_CARDS: IExpertiseCard[] = [
   {
-    id: 'grid-planning',
-    title: 'Grid Planning & Design',
-    description: 'Strategic planning and architectural design of your electrical grid infrastructure.',
-    icon: 'FiGrid',
-    features: ['Load forecasting', 'Network topology', 'Capacity analysis', 'Redundancy planning'],
+    id: 'nfc-cards',
+    title: 'NFC Smart Visiting Cards',
+    description: 'Never run out of business cards again. Share your contact, social, and payment links with a simple tap.',
+    features: ['One-tap sharing', 'Update details anytime', 'Professional first impression'],
   },
   {
-    id: 'infrastructure-management',
-    title: 'Infrastructure Management',
-    description: 'Comprehensive management and maintenance of grid infrastructure.',
-    icon: 'FiTrendingUp',
-    features: ['Asset tracking', 'Preventive maintenance', 'Equipment monitoring', 'Performance analytics'],
+    id: 'google-review',
+    title: 'Google Review Cards',
+    description: 'Grow your 5-star reviews instantly. Make it effortless for customers to review your Hyderabad business on GMB.',
+    features: ['Boost local SEO', 'Direct-to-review link', 'Increase customer trust'],
   },
   {
-    id: 'energy-optimization',
-    title: 'Energy Optimization',
-    description: 'Optimize energy distribution and reduce operational costs.',
-    icon: 'FiZap',
-    features: ['Load balancing', 'Peak shaving', 'Demand response', 'Cost reduction'],
+    id: 'website-dev',
+    title: 'Website Development',
+    description: 'Fast, responsive, and SEO-optimized websites built for conversions. We turn your visitors into loyal customers.',
+    features: ['Custom UI/UX designs', 'Mobile-first development', 'Fast loading speeds'],
   },
   {
-    id: 'smart-metering',
-    title: 'Smart Metering Solutions',
-    description: 'Advanced metering infrastructure for real-time data collection.',
-    icon: 'FiActivity',
-    features: ['Real-time monitoring', 'Data analytics', 'Anomaly detection', 'Customer insights'],
+    id: 'social-media',
+    title: 'Social Media Marketing',
+    description: 'Engage your local Hyderabad audience. We manage your presence on Instagram, FB, and LinkedIn to build authority.',
+    features: ['Targeted ad campaigns', 'Content strategy', 'Increased engagement'],
   },
   {
-    id: 'renewable-integration',
-    title: 'Renewable Integration',
-    description: 'Seamless integration of renewable energy sources into your grid.',
-    icon: 'FiSun',
-    features: ['Solar integration', 'Wind integration', 'Battery storage', 'Microgrid solutions'],
-  },
-  {
-    id: 'consulting',
-    title: 'Grid Consulting',
-    description: 'Expert consulting services for grid modernization and digital transformation.',
-    icon: 'FiBriefcase',
-    features: ['Modernization strategy', 'Digital transformation', 'Regulatory compliance', 'Best practices'],
-  },
-  {
-    id: 'training',
-    title: 'Training & Support',
-    description: 'Comprehensive training programs and ongoing technical support.',
-    icon: 'FiBook',
-    features: ['Staff training', 'Technical documentation', '24/7 support', 'Custom training'],
+    id: 'gmb-gsv',
+    title: 'GMB & GSV Services',
+    description: 'Dominate local search. We optimize your Google My Business and provide immersive Google Street View tours.',
+    features: ['GMB ranking boost', '360-degree photography', 'Map visibility'],
   },
 ];
 
+// Process Steps
 export const PROCESS_STEPS: IProcessStep[] = [
   {
-    id: 'step-1',
     number: 1,
-    title: 'Assessment & Planning',
-    description: 'We analyze your current grid infrastructure and develop a comprehensive modernization strategy.',
-    icon: 'FiCheckCircle',
+    title: 'Discovery & Consultation',
+    description: 'We begin with a detailed consultation to understand your business, target audience, and specific goals. This helps us lay the perfect foundation.',
   },
   {
-    id: 'step-2',
     number: 2,
-    title: 'Design & Architecture',
-    description: 'Our experts design scalable, secure solutions tailored to your specific needs.',
-    icon: 'FiCheckCircle',
+    title: 'Custom Strategy',
+    description: 'Our experts create a tailored digital marketing strategy, selecting the ideal mix of services—from SEO and CRM to social media—to maximize your impact.',
   },
   {
-    id: 'step-3',
     number: 3,
-    title: 'Implementation',
-    description: 'We deploy solutions with minimal downtime and maximum reliability.',
-    icon: 'FiCheckCircle',
+    title: 'Campaign Execution',
+    description: 'We bring the strategy to life by launching and managing your campaigns, ensuring seamless execution and optimization across all platforms.',
   },
   {
-    id: 'step-4',
     number: 4,
-    title: 'Support & Optimization',
-    description: 'Continuous monitoring and optimization ensure peak performance.',
-    icon: 'FiCheckCircle',
+    title: 'Analysis & Growth',
+    description: 'We continuously track performance, providing you with transparent reports and data-driven insights to ensure ongoing growth and ROI.',
   },
 ];
 
-export const PRICING_TIERS: IPricingTier[] = [
+// Statistics
+export const STATISTICS: IStatistic[] = [
+  { id: 'satisfaction', value: '0+', label: 'Customer Satisfaction' },
+  { id: 'reviews', value: '0+', label: '5-Star Reviews' },
+  { id: 'growth', value: '0x', label: 'Business Growth' },
+];
+
+// Services (7 main services)
+export const SERVICES: IService[] = [
   {
-    id: 'starter',
-    name: 'Starter',
-    price: 5000,
-    period: 'per month',
-    description: 'Perfect for small grids and pilot projects',
-    features: [
-      'Grid monitoring & analytics',
-      'Basic smart metering',
-      'Email support',
-      'Monthly reporting',
-      'Up to 1,000 data points',
-    ],
-    isPopular: false,
-    ctaText: 'Get Started',
+    id: 'gsv',
+    title: 'Google Street View (GSV)',
+    description: '360-degree virtual business tours for enhanced online visibility and engagement.',
   },
   {
-    id: 'professional',
-    name: 'Professional',
-    price: 12000,
-    period: 'per month',
-    description: 'Ideal for medium-sized grid operators',
-    features: [
-      'Everything in Starter',
-      'Advanced analytics & ML predictions',
-      'Full smart metering suite',
-      'Priority phone & email support',
-      'Weekly reporting',
-      'Up to 10,000 data points',
-      'Renewable integration',
-    ],
+    id: 'gmb',
+    title: 'Google My Business (GMB)',
+    description: 'Full optimization of your GMB profile to help your business rank higher in local search results.',
+  },
+  {
+    id: 'smm',
+    title: 'Social Media Marketing',
+    description: 'Instagram, Facebook, YouTube & more. We handle reels, ads, strategy, and influencer campaigns.',
+  },
+  {
+    id: 'digital-marketing',
+    title: 'Digital Marketing Solutions',
+    description: 'SEO, SEM, PPC, email campaigns, branding, and lead generation funnels.',
+  },
+  {
+    id: 'crm',
+    title: 'CRM & Automation Tools',
+    description: 'Custom CRM systems with smart marketing automation to streamline workflows.',
+  },
+  {
+    id: 'web-dev',
+    title: 'Website Development',
+    description: 'SEO-optimized, responsive websites including e-commerce and portfolio platforms.',
+  },
+  {
+    id: 'performance',
+    title: 'Performance Marketing',
+    description: 'Data-driven advertising strategies crafted to maximize your ROI.',
+  },
+];
+
+// Pricing Tiers
+export const PRICING_TIERS: IPricingTier[] = [
+  {
+    id: 'nfc-basic',
+    name: 'Smart NFC Card',
+    price: '₹1999',
+    period: 'one-time',
+    description: 'Premium quality NFC-embedded cards with custom design and lifetime portal access.',
+    cta: 'Contact for Pricing',
+  },
+  {
+    id: 'digital-marketing',
+    name: 'Digital Marketing',
+    price: '₹9,999',
+    period: 'monthly',
+    description: 'Comprehensive monthly management including Social Media, GMB, and SEO support.',
+    cta: 'Get Quote',
     isPopular: true,
-    ctaText: 'Start Free Trial',
   },
   {
     id: 'enterprise',
-    name: 'Enterprise',
-    price: 0,
-    period: 'custom pricing',
-    description: 'Customized solutions for large-scale operations',
-    features: [
-      'Everything in Professional',
-      'Custom infrastructure design',
-      'Dedicated account manager',
-      '24/7 phone support',
-      'Daily reporting & real-time dashboards',
-      'Unlimited data points',
-      'API access & custom integrations',
-      'On-site training & consulting',
-    ],
-    isPopular: false,
-    ctaText: 'Contact Sales',
+    name: 'Enterprise / Custom',
+    price: 'Contact Us',
+    description: 'Tailor-made software, bulk NFC orders, or full-scale business automation solutions.',
+    cta: 'Contact Now',
+    contact: true,
   },
 ];
 
+// Testimonials
 export const TESTIMONIALS: ITestimonial[] = [
   {
-    id: 'testimonial-1',
-    name: 'John Mitchell',
-    title: 'Grid Operations Manager',
-    company: 'Metropolitan Power Supply',
-    content:
-      'Pinnacle Grid transformed our operations. We reduced downtime by 40% and improved efficiency significantly.',
+    id: 'ravi-kumar',
+    quote: 'Pinnacle Grid set up our Google My Business profile and within 3 weeks we started getting walk-in customers who found us through Google Search. Highly recommend.',
+    author: 'Ravi Kumar',
+    role: 'Restaurant Owner',
+    location: 'Hyderabad',
   },
   {
-    id: 'testimonial-2',
-    name: 'Sarah Chen',
-    title: 'Chief Technology Officer',
-    company: 'Green Energy Solutions',
-    content:
-      'The renewable integration capabilities are outstanding. We integrated solar seamlessly into our existing infrastructure.',
+    id: 'sana-fatima',
+    quote: 'The NFC Smart Card they designed for me looks premium and works perfectly. My clients are always impressed when I tap to share my contact details.',
+    author: 'Sana Fatima',
+    role: 'Boutique Owner',
+    location: 'Hyderabad',
   },
   {
-    id: 'testimonial-3',
-    name: 'Michael Rodriguez',
-    title: 'Director of Infrastructure',
-    company: 'Regional Utility Network',
-    content:
-      'Outstanding customer support and technical expertise. They guided us through every step of our digital transformation.',
-  },
-  {
-    id: 'testimonial-4',
-    name: 'Emma Thompson',
-    title: 'Operations Director',
-    company: 'Northern Grid Corporation',
-    content:
-      'The smart metering solutions provided us with insights we never had before. ROI was achieved within 6 months.',
+    id: 'arjun-mehta',
+    quote: 'Their social media team handles everything — reels, captions, posting schedule. My Instagram following doubled in 2 months.',
+    author: 'Arjun Mehta',
+    role: 'Freelance Consultant',
+    location: 'Hyderabad',
   },
 ];
 
+// FAQs
 export const FAQS: IFAQ[] = [
   {
-    id: 'faq-1',
-    question: 'How does Pinnacle Grid help reduce costs?',
-    answer:
-      'Our AI-powered analytics optimize energy distribution, eliminate waste, and provide real-time insights. Customers typically see 15-30% cost reduction within the first year through improved efficiency and demand management.',
+    id: 'nfc-what',
+    question: 'What is an NFC Smart Visiting Card and how does it work?',
+    answer: 'An NFC Smart Visiting Card is a premium physical card embedded with a microchip. When someone taps it with their smartphone, it instantly opens your digital profile — no app needed. It works on all modern Android and iPhone devices.',
   },
   {
-    id: 'faq-2',
-    question: 'Is integration with existing infrastructure difficult?',
-    answer:
-      'No, our solutions are designed for seamless integration. We work with your existing systems and infrastructure. Our team handles the entire deployment process with minimal disruption to your operations.',
+    id: 'nfc-delivery',
+    question: 'How long does it take to deliver the NFC cards?',
+    answer: 'Standard delivery typically takes 7-10 business days from order confirmation. We also offer expedited shipping options for urgent requirements. Contact us for specific timelines.',
   },
   {
-    id: 'faq-3',
-    question: 'What kind of support do you provide?',
-    answer:
-      'We offer tiered support from email to 24/7 phone support depending on your plan. Our dedicated support team includes certified engineers ready to assist with any technical issues or questions.',
+    id: 'nfc-fee',
+    question: 'Do I need to pay a monthly fee after buying the NFC card?',
+    answer: 'No monthly fees are required. After purchasing the NFC card, you get lifetime access to our portal to manage and update your card details. It\'s a one-time investment.',
   },
   {
-    id: 'faq-4',
-    question: 'Can you handle renewable energy sources?',
-    answer:
-      'Absolutely! Our platform is built to integrate solar, wind, and battery storage systems. We handle the complexities of variable renewable sources and ensure stable grid operation.',
+    id: 'marketing-package',
+    question: 'What does the Digital Marketing package include?',
+    answer: 'Our Digital Marketing package includes: Social Media Management (Facebook, Instagram, LinkedIn), Google My Business Optimization, SEO basics, content creation, ad management, and monthly performance reports.',
   },
   {
-    id: 'faq-5',
-    question: 'How is data security handled?',
-    answer:
-      'Data security is paramount. We use enterprise-grade encryption, multi-factor authentication, and comply with industry standards. All data is encrypted both in transit and at rest.',
-  },
-  {
-    id: 'faq-6',
-    question: 'What is the typical implementation timeline?',
-    answer:
-      'Implementation timelines vary based on your grid size and complexity. Small grids typically take 2-4 weeks, while large enterprise deployments may take 3-6 months. We provide detailed project plans upfront.',
+    id: 'hyderabad-consultation',
+    question: 'Are you based in Hyderabad and do you offer in-person consultations?',
+    answer: 'Yes, we\'re based in Hyderabad. We offer both in-person consultations at our office and virtual meetings. Schedule a free consultation with us to discuss your business needs.',
   },
 ];
 
-export const COMPANY_NAME = 'Pinnacle Grid';
-export const COMPANY_DESCRIPTION = 'Leading intelligent electrical grid solutions for modern energy infrastructure.';
-export const COMPANY_URL = 'https://www.pinnaclegrid.com';
+// Navigation
+export const NAV_LINKS = [
+  { label: 'Home', href: '#' },
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Careers', href: '#careers' },
+  { label: 'Contact', href: '#contact' },
+];

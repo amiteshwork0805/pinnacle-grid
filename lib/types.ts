@@ -1,29 +1,39 @@
+export interface IExpertiseCard {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+export interface IProcessStep {
+  number: number;
+  title: string;
+  description: string;
+}
+
 export interface IService {
   id: string;
   title: string;
   description: string;
-  icon: string;
-  features: string[];
 }
 
 export interface IPricingTier {
   id: string;
   name: string;
-  price: number;
-  period: string;
+  price: string;
   description: string;
-  features: string[];
-  isPopular: boolean;
-  ctaText: string;
+  features?: string[];
+  isPopular?: boolean;
+  cta: string;
+  contact?: boolean;
 }
 
 export interface ITestimonial {
   id: string;
-  name: string;
-  title: string;
-  company: string;
-  content: string;
-  avatar?: string;
+  quote: string;
+  author: string;
+  role: string;
+  location: string;
 }
 
 export interface IFAQ {
@@ -32,10 +42,13 @@ export interface IFAQ {
   answer: string;
 }
 
-export interface IProcessStep {
+export interface IValue {
   id: string;
-  number: number;
   title: string;
-  description: string;
-  icon: string;
+}
+
+export interface IStatistic {
+  id: string;
+  value: string;
+  label: string;
 }

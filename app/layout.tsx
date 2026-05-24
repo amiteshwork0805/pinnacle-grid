@@ -3,17 +3,20 @@ import './globals.css';
 import { COMPANY_NAME, COMPANY_DESCRIPTION, COMPANY_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `${COMPANY_NAME} - Intelligent Electrical Grid Solutions`,
+  title: `${COMPANY_NAME} | NFC Smart Cards & Digital Marketing Hyderabad`,
   description: COMPANY_DESCRIPTION,
   metadataBase: new URL(COMPANY_URL),
   keywords: [
-    'electrical grid',
-    'smart grid',
-    'energy infrastructure',
-    'grid optimization',
-    'renewable energy',
-    'smart metering',
-    'grid management',
+    'NFC smart cards',
+    'digital marketing Hyderabad',
+    'social media marketing',
+    'Google My Business',
+    'website development',
+    'local SEO',
+    'GMB optimization',
+    'GSV services',
+    'smart visiting cards',
+    'Hyderabad business solutions',
   ],
   authors: [
     {
@@ -38,10 +41,10 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IN',
     url: COMPANY_URL,
     siteName: COMPANY_NAME,
-    title: `${COMPANY_NAME} - Intelligent Electrical Grid Solutions`,
+    title: `${COMPANY_NAME} | NFC Smart Cards & Digital Marketing Hyderabad`,
     description: COMPANY_DESCRIPTION,
     images: [
       {

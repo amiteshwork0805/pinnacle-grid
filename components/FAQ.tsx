@@ -5,52 +5,30 @@ import { FAQS } from '@/lib/constants';
 import FAQItem from './FAQItem';
 
 export default function FAQ() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
-    },
-  };
-
   return (
-    <section className="w-full py-20 bg-secondary">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
-          variants={titleVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-700">
-            Find answers to common questions about our platform and services
+          <span className="text-blue-600 font-semibold text-sm tracking-widest uppercase">FAQ</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mt-2 mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-gray-600">
+            Utilize our tools to develop your concepts and bring your vision to life. Once complete, effortlessly share your creations.
           </p>
         </motion.div>
 
-        <motion.div
-          className="space-y-4"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          {FAQS.map((faq) => (
-            <FAQItem key={faq.id} faq={faq} />
+        <div className="space-y-4">
+          {FAQS.map((faq, index) => (
+            <FAQItem key={faq.id} faq={faq} index={index} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
